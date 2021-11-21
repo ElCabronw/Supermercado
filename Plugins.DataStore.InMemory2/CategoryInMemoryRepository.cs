@@ -10,7 +10,7 @@ namespace Plugins.DataStore.InMemory
     {
         private List<Category> categories;
 
-        public CategoryInMemoryRepository()
+        public CategoryInMemoryRepository() //Depois substituir por database
         {
             categories = new List<Category>
             {
