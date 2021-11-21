@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CoreBusiness2\CoreBusiness.csproj" />
+    <ProjectReference Include="..\UseCases2\UseCases.csproj" />
+  </ItemGroup>
+</Project>
