@@ -59,5 +59,11 @@ namespace Plugins.DataStore.InMemory2
 
             }
         }
+
+        public void DeleteProduct(int productId)
+        {
+            var productToDelete = GetProductById(productId);
+            products.Remove(productToDelete);
+        }
     }
 }
