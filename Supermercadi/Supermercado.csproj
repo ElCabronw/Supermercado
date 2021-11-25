@@ -21,8 +21,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="Shared\" />
+    <None Remove="Controls\" />
+    <None Remove="bootstrap" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Shared\" />
+    <Folder Include="Controls\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="bootstrap" Version="5.1.2" />
   </ItemGroup>
 </Project>

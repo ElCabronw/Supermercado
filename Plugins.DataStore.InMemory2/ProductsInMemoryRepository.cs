@@ -10,6 +10,7 @@ namespace Plugins.DataStore.InMemory2
     {
 
         private List<Product> products;
+        
 
         public ProductsInMemoryRepository()
         {
@@ -20,7 +21,7 @@ namespace Plugins.DataStore.InMemory2
                 new Product{ ProductId = 3, CategoryId = 2, Name = "Pao Integral", Quantity = 200, Price = 1.50},
                 new Product{ ProductId = 4, CategoryId = 2, Name = "Pao Frances", Quantity = 200, Price = 1},
             };
-
+            
         }
 
         public void AddProduct(Product product)
@@ -64,6 +65,12 @@ namespace Plugins.DataStore.InMemory2
         {
             var productToDelete = GetProductById(productId);
             products.Remove(productToDelete);
+        }
+
+        public IEnumerable<Product> GetProductsByCategoryId(int categoryId)
+        {
+            var productsByCategoryId = products.Where(x => x.CategoryId == categoryId);
+            return productsByCategoryId;
         }
     }
 }
