@@ -7,10 +7,14 @@
   <ItemGroup>
     <None Remove="DataStorePluginInterfaces\" />
     <None Remove="UseCaseInterfaces\" />
+    <None Remove="CategoriesUseCases\" />
+    <None Remove="ProductsUseCases\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DataStorePluginInterfaces\" />
     <Folder Include="UseCaseInterfaces\" />
+    <Folder Include="CategoriesUseCases\" />
+    <Folder Include="ProductsUseCases\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CoreBusiness2\CoreBusiness.csproj" />

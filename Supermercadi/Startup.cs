@@ -10,9 +10,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Plugins.DataStore.InMemory;
+using Plugins.DataStore.InMemory2;
 using Supermercado.Data;
 using UseCases;
 using UseCases.DataStorePluginInterfaces;
+using UseCases.ProductsUseCases;
 
 namespace Supermercado
 {
@@ -35,6 +37,7 @@ namespace Supermercado
 
             //Injecao de Dependencia para in Memory
             services.AddScoped<ICategoryRepository, CategoryInMemoryRepository>();
+            services.AddScoped<IProductRepository, ProductsInMemoryRepository>();
 
             //Injecao de Dependencia para UseCases and Repositories
             services.AddTransient<IViewCategoriesUseCase,ViewCategoriesUseCase>();
@@ -43,6 +46,10 @@ namespace Supermercado
             services.AddTransient<IEditCategoryUseCase, EditCategoryUseCase>();
             services.AddTransient<IGetCategoryByIdUseCase, GetCategoryByIdUseCase>();
             services.AddTransient<IDeleteCategoryUseCase, DeleteCategoryUseCase>();
+            services.AddTransient<IViewProductsUseCase, ViewProductsUseCase>();
+            services.AddTransient<IAddProductUseCase, AddProductUseCase>();
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

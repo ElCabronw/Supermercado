@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
+using CoreBusiness;
+
 namespace UseCases.DataStorePluginInterfaces
 {
-    public class IProductRepository
+    public interface IProductRepository
     {
-        public IProductRepository()
-        {
-        }
+        IEnumerable<Product> GetProducts();
+        void AddProduct(Product product);
     }
 }

@@ -1,7 +1,10 @@
-﻿namespace UseCases
+﻿using System.Collections.Generic;
+using CoreBusiness;
+
+namespace UseCases
 {
     public interface IViewProductsUseCase
     {
-        System.Collections.Generic.IEnumerable<Product> Execute();
+        IEnumerable<Product> Execute();
     }
 }

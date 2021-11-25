@@ -1,10 +1,23 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using CoreBusiness;
+using UseCases.DataStorePluginInterfaces;
+
 namespace UseCases
 {
-    public class Products
+    public class ViewProductsUseCase : IViewProductsUseCase
     {
-        public Products()
+        private readonly IProductRepository productRepository;
+
+        public ViewProductsUseCase(IProductRepository productRepository)
         {
+            this.productRepository = productRepository;
+        }
+        public IEnumerable<Product> Execute()
+        {
+            return productRepository.GetProducts();
+
         }
     }
 }
