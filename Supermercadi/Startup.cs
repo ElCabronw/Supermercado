@@ -48,7 +48,8 @@ namespace Supermercado
             services.AddTransient<IDeleteCategoryUseCase, DeleteCategoryUseCase>();
             services.AddTransient<IViewProductsUseCase, ViewProductsUseCase>();
             services.AddTransient<IAddProductUseCase, AddProductUseCase>();
-
+            services.AddTransient<IEditProductUseCase, EditProductUseCase>();
+            services.AddTransient<IGetProductByIdUseCase, GetProductByIdUseCase>();
 
         }
 
