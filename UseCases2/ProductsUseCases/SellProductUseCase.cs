@@ -20,10 +20,10 @@ namespace UseCases
             {
                 return;
             }
-
+            recordTransactionUseCase.Execute(cashierName, productId, qtyToSell);
             product.Quantity -= qtyToSell;
             productRepository.UpdateProduct(product);
-            recordTransactionUseCase.Execute(cashierName, productId, qtyToSell);
+           
         }
     }
 }

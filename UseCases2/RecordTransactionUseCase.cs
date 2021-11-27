@@ -21,7 +21,7 @@ namespace UseCases
             var product = getProductByIdUseCase.Execute(productId);
 
 
-            transactionRepository.Save(cashierName, productId, product.Price.Value,product.Quantity.Value, qty);
+            transactionRepository.Save(cashierName, productId,product.Name, product.Price.Value,product.Quantity.Value, qty);
 
         }
     }
