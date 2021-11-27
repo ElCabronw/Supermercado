@@ -38,7 +38,7 @@ namespace Supermercado
             //Injecao de Dependencia para in Memory
             services.AddScoped<ICategoryRepository, CategoryInMemoryRepository>();
             services.AddScoped<IProductRepository, ProductsInMemoryRepository>();
-
+            services.AddScoped<ITransactionRepository, TransactionInMemoryRepository>();
             //Injecao de Dependencia para UseCases and Repositories
             services.AddTransient<IViewCategoriesUseCase,ViewCategoriesUseCase>();
 
@@ -53,6 +53,8 @@ namespace Supermercado
             services.AddTransient<IDeleteProductUseCase, DeleteProductUseCase>();
             services.AddTransient<IViewProductsByCategoryId, ViewProductsByCategoryId>();
             services.AddTransient<ISellProductUseCase, SellProductUseCase>();
+            services.AddTransient<IRecordTransactionUseCase, RecordTransactionUseCase>();
+            services.AddTransient<IGetTodayTransactionsUseCase, GetTodayTransactionsUseCase>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
